@@ -1,53 +1,63 @@
 const cardsArray = [{
 	'name': 'angular',
-	'img': '/images/angularjs-original.svg'
+	'img': 'img/angularjs-original.svg'
 },
 {
 	'name': 'coffee',
-	'img': '/images/coffeescript-original.svg'
+	'img': 'img/coffeescript-original.svg'
 },
 {
 	'name': 'c++',
-	'img': '/images/cplusplus-original.svg'
+	'img': 'img/cplusplus-original.svg'
 },
 {
 	'name': 'drupal',
-	'img': '/images/drupal-original.svg'
+	'img': 'img/drupal-original.svg'
 },
 {
 	'name': 'electron',
-	'img': '/images/electron-original.svg'
+	'img': 'img/electron-original.svg'
 },
 {
 	'name': 'express',
-	'img': '/images/express-original.svg'
+	'img': 'img/express-original.svg'
 },
 {
 	'name': 'go',
-	'img': '/images/go-original.svg'
+	'img': 'img/go-original.svg'
 },
 {
 	'name': 'java',
-	'img': '/images/java-original.svg'
+	'img': 'img/java-original.svg'
 },
 {
 	'name': 'javascript',
-	'img': '/images/javascript-original.svg'
+	'img': 'img/javascript-original.svg'
 },
 {
 	'name': 'python',
-	'img': '/images/python-original.svg'
+	'img': 'img/python-original.svg'
 },
 {
 	'name': 'react',
-	'img': '/images/react-original.svg'
+	'img': 'img/react-original.svg'
 },
 {
 	'name': 'vue',
-	'img': '/images/vuejs-original.svg'
+	'img': 'img/vuejs-original.svg'
 }]
+
+let gameGrid = cardsArray.concat(cardsArray) // duplicate the array to have a match for each card
 
 const game = document.getElementById('game')
 const grid = document.createElement('section') // create html section
 grid.setAttribute('class', 'grid') //creates class=grid in the section created above
 game.appendChild(grid) // append grid section to game
+
+gameGrid.forEach(item => {
+	const card = document.createElement('div') // create a div to hold each card
+	card.classList.add('card') // apply card class to each div
+	card.dataset.name = item.name // set data-name of the div to the cardsArray name
+	card.style.backgroundImage = `url(${item.img})` // apply background image of the div to the cardsArray image
+	grid.appendChild(card) // append div to the grid
+})
