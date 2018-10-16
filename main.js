@@ -3,16 +3,8 @@ const cardsArray = [{
 	'img': 'img/angularjs-original.svg'
 },
 {
-	'name': 'coffee',
-	'img': 'img/coffeescript-original.svg'
-},
-{
 	'name': 'c++',
 	'img': 'img/cplusplus-original.svg'
-},
-{
-	'name': 'drupal',
-	'img': 'img/drupal-original.svg'
 },
 {
 	'name': 'electron',

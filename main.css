@@ -45,5 +45,23 @@ body {
 	transform: rotateY(180deg);
 }
 .match .front {
-	background: #6589f9;
+	background: #000000;
+	animation: zoomie 0.5s ease-in infinite;
+}
+@keyframes zoomie {
+	from {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
