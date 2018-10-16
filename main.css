@@ -6,7 +6,6 @@ html {
 }
 body {
 	margin: 20px 0;
-	background: #6589f9;
 }
 .grid {
 	max-width: 960px;
@@ -45,7 +44,7 @@ body {
 	transform: rotateY(180deg);
 }
 .match .front {
-	background: #6589f9;
+	background: transparent;
 	animation: zoomie 2s ease-out 1;
 }
 

@@ -47,6 +47,7 @@ let count = 0 // counter to keep track of selected cards
 let previousTarget = null
 let delay = 1000
 
+
 const game = document.getElementById('game')
 const grid = document.createElement('section') // create html section
 	grid.setAttribute('class', 'grid') //creates class=grid in the section created above
@@ -119,3 +120,23 @@ grid.addEventListener('click', event => { //event listener for clicked item
 			}
 
 })
+const currentTime = () => {
+	let date = new Date()
+	let h = date.getHours()
+	let m = date.getMinutes()
+	let s = date.getSeconds()
+
+const colorWheel = () => {
+	let red = (h*(Math.round(Math.random()*10))).toString(16)
+	let green = (m*(Math.round(Math.random()*10))).toString(16)
+	let blue = (s*(Math.round(Math.random()*10))).toString(16)
+
+	let color = ('#'+red+green+blue) // random hex generator
+
+	document.body.style.backgroundColor = color
+	setTimeout(currentTime, 1000)
+}
+colorWheel()
+}
+currentTime()
+
